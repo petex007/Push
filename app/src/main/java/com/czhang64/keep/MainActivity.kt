@@ -2,18 +2,50 @@ package com.czhang64.keep
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import com.czhang64.keep.ui.MainFragment
 import com.czhang64.keep.ui.SplashFragment
-import com.czhang64.keep.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var navHostFragment: NavHostFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, SplashFragment.newInstance())
-                    .commitNow()
+
+        navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        NavigationUI.setupActionBarWithNavController(this,navHostFragment.navController)
+
+        navHostFragment.navController.addOnDestinationChangedListener { _, destination, _ ->
+            supportActionBar?.let {
+                it.title = when(destination.id){
+                    R.id.settingsFragment -> getString(R.string.Settings)
+                    else -> getString((R.string.app_name))
+                }
+            }
+        }
+    }
+
+    override fun onSupportNavigateUp() = Navigation.findNavController(this,R.id.nav_host_fragment).navigateUp()
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.main_menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.action_settings->{
+                navHostFragment.navController.navigate(R.id.action_mainFragment_to_settingsFragment)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

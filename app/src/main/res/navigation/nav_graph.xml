@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.czhang64.keep.ui.main.MainFragment"
+        android:name="com.czhang64.keep.ui.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
         <action

@@ -1,4 +1,4 @@
-package com.czhang64.keep.ui.main
+package com.czhang64.keep.ui
 
 import androidx.lifecycle.ViewModel
 
