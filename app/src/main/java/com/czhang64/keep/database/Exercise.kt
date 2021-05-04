@@ -14,7 +14,7 @@ data class Exercise(
     var name: String = "",
 
     @ColumnInfo(name="exercise_type")
-    var type: String = "",
+    var type: Int = 0,
 
     @ColumnInfo(name="exercise_time")
     var time: String = "",

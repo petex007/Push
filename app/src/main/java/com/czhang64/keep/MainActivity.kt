@@ -7,8 +7,6 @@ import android.view.MenuItem
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.czhang64.keep.ui.MainFragment
-import com.czhang64.keep.ui.SplashFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,7 +43,19 @@ class MainActivity : AppCompatActivity() {
                 navHostFragment.navController.navigate(R.id.action_mainFragment_to_settingsFragment)
                 true
             }
+            R.id.action_info->{
+                navHostFragment.navController.navigate(R.id.action_mainFragment_to_infoFragment)
+                true
+            }
+            R.id.action_web->{
+                navHostFragment.navController.navigate(R.id.action_mainFragment_to_webViewFragment)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    companion object {
+        private lateinit var instance: MainActivity
+        const val DEFAULT_WEBVIEW_URL = "https://www.self.com/story/fitness-tips-trainers-give-beginner-clients"
     }
 }

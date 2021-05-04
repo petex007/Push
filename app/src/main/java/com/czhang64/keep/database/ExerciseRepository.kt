@@ -13,20 +13,20 @@ class ExerciseRepository private constructor(context: Context) {
         "exercise_database"
     ).build()
 
-    private val friendDao = database.exerciseDao()
+    private val exerciseDao = database.exerciseDao()
     private val executor = Executors.newSingleThreadExecutor()
 
-    fun getAllFriends(): LiveData<List<Exercise>> = friendDao.getAllFriends()
+    fun getAllExercises(): LiveData<List<Exercise>> = exerciseDao.getAllExercises()
 
     fun insert(friend: Exercise) {
         executor.execute {
-            friendDao.insert(friend)
+            exerciseDao.insert(friend)
         }
     }
 
-    fun deleteFriend(friend: Exercise) {
+    fun deleteExercise(exercise: Exercise) {
         executor.execute {
-            friendDao.deleteExercise(friend)
+            exerciseDao.deleteExercise(exercise)
         }
     }
 

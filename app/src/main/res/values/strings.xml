@@ -15,4 +15,17 @@
     <string name="WeightHint">Weight...</string>
     <string name="CommentHint">Comment...</string>
     <string name="cancelBt">Cancel</string>
+    <string name="InfoTitle">Information</string>
+    <string name="word_deleted_alert">Are you sure to delete: %s ??</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="go">GO</string>
+    <string name="webTitle">Web</string>
+    <string-array name="typesArray">
+        <item>Chest</item>
+        <item>Cardio</item>
+        <item>Leg</item>
+        <item>Arm</item>
+        <item>Back</item>
+    </string-array>
 </resources>

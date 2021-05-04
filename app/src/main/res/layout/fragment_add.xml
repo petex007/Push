@@ -73,7 +73,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:entries="@array/typesArray"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -86,7 +87,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editName"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -98,7 +99,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTime"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -110,7 +111,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editWeight"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -122,7 +123,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline11" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/editComment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
