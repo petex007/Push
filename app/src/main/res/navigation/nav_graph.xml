@@ -31,8 +31,11 @@
         <action
             android:id="@+id/action_mainFragment_to_webViewFragment"
             app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_checkFragment"
+            app:destination="@id/checkFragment" />
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/addFragment"
         android:name="com.czhang64.keep.ui.AddFragment"
         android:label="fragment_add"
@@ -40,7 +43,7 @@
         <action
             android:id="@+id/action_addFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
-    </fragment>
+    </dialog>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.czhang64.keep.ui.SettingsFragment"
@@ -66,6 +69,15 @@
         tools:layout="@layout/fragment_web_view" >
         <action
             android:id="@+id/action_webViewFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkFragment"
+        android:name="com.czhang64.keep.ui.CheckFragment"
+        android:label="fragment_check"
+        tools:layout="@layout/fragment_check" >
+        <action
+            android:id="@+id/action_checkFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

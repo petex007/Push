@@ -40,6 +40,9 @@ class MainFragment : Fragment() {
             mainDelBt.setOnClickListener {
                 itemDeletedAlert(sharedViewModel.toDelete)
             }
+            checkbt.setOnClickListener {
+                findNavController().navigate(R.id.action_mainFragment_to_checkFragment)
+            }
             recyclerView.run{
                 layoutManager = LinearLayoutManager(context)
                 adapter = exerciseAdapter
@@ -78,17 +81,16 @@ class MainFragment : Fragment() {
         fun bind(exercise: Exercise) {
             this.exercise = exercise
             when(sharedViewModel.set){
-                0->wordTextView.text = "NickName"
-                1->wordTextView.text = "FirstName"
-                2->wordTextView.text = "FirstName"
-                3->wordTextView.text = "FirstName"
-                4->wordTextView.text = "LastName"
-                5->wordTextView.text = "LastName"
+                0->wordTextView.text = "Name: ${exercise.name}\nDate: ${exercise.time}"
+                1->wordTextView.text = "Name: ${exercise.name}\nComment: ${exercise.comment}"
+                else->wordTextView.text = "Date: ${exercise.time}\nComment: ${exercise.comment}"
             }
             when(exercise.type){
-                0->wordImageView.setImageResource(R.drawable.type_back)
+                0->wordImageView.setImageResource(R.drawable.type_chest)
                 1->wordImageView.setImageResource(R.drawable.type_cardio)
-                else -> wordImageView.setImageResource(R.drawable.type_arm)
+                2 -> wordImageView.setImageResource(R.drawable.type_leg)
+                3->wordImageView.setImageResource(R.drawable.type_arm)
+                4->wordImageView.setImageResource(R.drawable.type_back)
             }
         }
     }

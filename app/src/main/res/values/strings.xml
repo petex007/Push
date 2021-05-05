@@ -28,4 +28,8 @@
         <item>Arm</item>
         <item>Back</item>
     </string-array>
+    <string name="set1">name+date</string>
+    <string name="set2">name+comment</string>
+    <string name="set3">date+comment</string>
+    <string name="checkBt">Check</string>
 </resources>
