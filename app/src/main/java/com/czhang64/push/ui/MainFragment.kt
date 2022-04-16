@@ -81,9 +81,9 @@ class MainFragment : Fragment() {
         fun bind(exercise: Exercise) {
             this.exercise = exercise
             when(sharedViewModel.set){
-                0->wordTextView.text = "Name: ${exercise.name}\nDate: ${exercise.time}"
-                1->wordTextView.text = "Name: ${exercise.name}\nComment: ${exercise.comment}"
-                else->wordTextView.text = "Date: ${exercise.time}\nComment: ${exercise.comment}"
+                0->wordTextView.text = "Name: ${exercise.name} \n Date: ${exercise.time}"
+                1->wordTextView.text = "Name: ${exercise.name} \n Comment: ${exercise.comment}"
+                else->wordTextView.text = "Date: ${exercise.time} \n Comment: ${exercise.comment}"
             }
             when(exercise.type){
                 0->wordImageView.setImageResource(R.drawable.type_chest)
