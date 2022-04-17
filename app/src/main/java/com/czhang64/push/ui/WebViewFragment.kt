@@ -1,4 +1,4 @@
-package com.czhang64.keep.ui
+package com.czhang64.push.ui
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -12,9 +12,8 @@ import android.webkit.WebViewClient
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navGraphViewModels
-import com.czhang64.keep.R
-import com.czhang64.keep.databinding.FragmentWebViewBinding
+import com.czhang64.push.R
+import com.czhang64.push.databinding.FragmentWebViewBinding
 
 class WebViewFragment : Fragment() {
 
@@ -31,7 +30,7 @@ class WebViewFragment : Fragment() {
         binding = webviewFragmentBinding
         binding?.apply{
             webBackBt.setOnClickListener {
-                findNavController().navigate(R.id.action_webViewFragment_to_mainFragment)
+//                findNavController().navigate(R.id.action_webViewFragment_to_mainFragment)
             }
         }
         return webviewFragmentBinding.root

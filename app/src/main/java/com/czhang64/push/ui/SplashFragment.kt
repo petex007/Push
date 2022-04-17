@@ -1,14 +1,12 @@
-package com.czhang64.keep.ui
+package com.czhang64.push.ui
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.czhang64.keep.R
-import com.czhang64.keep.databinding.FragmentSplashBinding
+import com.czhang64.push.R
+import com.czhang64.push.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
     private val sharedViewModel: MainViewModel by activityViewModels()
@@ -18,6 +16,8 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
+
         val SplashBinding = FragmentSplashBinding.inflate(inflater, container, false)
         binding = SplashBinding
         binding?.apply {
@@ -27,5 +27,8 @@ class SplashFragment : Fragment() {
         }
         return SplashBinding.root
     }
-
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        menu.clear()
+    }
 }

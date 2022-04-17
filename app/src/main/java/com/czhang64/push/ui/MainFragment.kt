@@ -1,9 +1,8 @@
-package com.czhang64.keep.ui
+package com.czhang64.push.ui
 
 import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Color
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,10 +16,9 @@ import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.czhang64.keep.R
-import com.czhang64.keep.database.Exercise
-import com.czhang64.keep.databinding.MainFragmentBinding
-import com.czhang64.keep.ui.MainViewModel
+import com.czhang64.push.R
+import com.czhang64.push.database.Exercise
+import com.czhang64.push.databinding.MainFragmentBinding
 import com.squareup.picasso.Picasso
 
 class MainFragment : Fragment() {
@@ -34,7 +32,10 @@ class MainFragment : Fragment() {
         val bindingMain = MainFragmentBinding.inflate(inflater, container, false)
         binding = bindingMain
         binding?.apply{
-            mainAddBt.setOnClickListener {
+//            mainAddBt.setOnClickListener {
+//                findNavController().navigate(MainFragmentDirections.actionMainFragmentToAddFragment())
+//            }
+            addImg.setOnClickListener {
                 findNavController().navigate(MainFragmentDirections.actionMainFragmentToAddFragment())
             }
             mainDelBt.setOnClickListener {
@@ -61,7 +62,7 @@ class MainFragment : Fragment() {
         val msg = resources.getString(R.string.word_deleted_alert,exercise.name)
         val builder = AlertDialog.Builder(context)
         with(builder){
-            setTitle("Alert")
+            setTitle("Confirm")
             setMessage(msg)
             setPositiveButton("OK",null)
             setPositiveButton(R.string.yes){_,_->
@@ -81,9 +82,12 @@ class MainFragment : Fragment() {
         fun bind(exercise: Exercise) {
             this.exercise = exercise
             when(sharedViewModel.set){
-                0->wordTextView.text = "Name: ${exercise.name} \n Date: ${exercise.time}"
-                1->wordTextView.text = "Name: ${exercise.name} \n Comment: ${exercise.comment}"
-                else->wordTextView.text = "Date: ${exercise.time} \n Comment: ${exercise.comment}"
+                0->wordTextView.text = "Name: ${exercise.name}"
+                1->wordTextView.text = "Name: ${exercise.name}"
+                else->wordTextView.text = "Name: ${exercise.name}"
+//                0->wordTextView.text = "Name: ${exercise.name} \n Date: ${exercise.time}"
+//                1->wordTextView.text = "Name: ${exercise.name} \n Comment: ${exercise.comment}"
+//                else->wordTextView.text = "Date: ${exercise.time} \n Comment: ${exercise.comment}"
             }
             when(exercise.type){
                 0->wordImageView.setImageResource(R.drawable.type_chest)
@@ -91,6 +95,7 @@ class MainFragment : Fragment() {
                 2 -> wordImageView.setImageResource(R.drawable.type_leg)
                 3->wordImageView.setImageResource(R.drawable.type_arm)
                 4->wordImageView.setImageResource(R.drawable.type_back)
+                5->wordImageView.setImageResource(R.drawable.bed)
             }
         }
     }
@@ -105,10 +110,10 @@ class MainFragment : Fragment() {
 
         override fun onBindViewHolder(holder: ExerciseViewHolder, position: Int) {
             if (pos == position) {
-                holder.itemView.setBackgroundColor(Color.parseColor("#FF000000"))
+                holder.itemView.setBackgroundColor(Color.parseColor("#ff192d"))
             }
             else {
-                holder.itemView.setBackgroundColor(Color.parseColor("#FF7A7A7A"))
+                holder.itemView.setBackgroundColor(Color.parseColor("#000000"))
             }
             holder.bind(words[position])
             holder.itemView.setOnClickListener {

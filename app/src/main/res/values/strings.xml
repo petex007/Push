@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Keep</string>
+    <string name="app_name">Push</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="startBt">Start</string>
@@ -8,15 +8,15 @@
     <string name="Settings">Settings</string>
     <string name="applyBt">Apply</string>
     <string name="backBt">Back</string>
-    <string name="InformationTest">This app will help you to plan the work out you going to do each week. You will be able to add and check exercises. You can also check all the exercises that you have finished. Keep it up!</string>
+    <string name="InformationTest">This app will help you to plan the work out you going to do each week. You will be able to add and check exercises. You can also check all the exercises that you have finished. Keep it up!\nCreator: Chengyi Zhang\nVersion:1.0.0\nCSC214 University of Rochester</string>
     <string name="type">Type</string>
     <string name="nameHint">Name...</string>
     <string name="timeHint">Time...</string>
-    <string name="WeightHint">Weight...</string>
+    <string name="WeightHint">Rest...</string>
     <string name="CommentHint">Comment...</string>
     <string name="cancelBt">Cancel</string>
     <string name="InfoTitle">Information</string>
-    <string name="word_deleted_alert">Are you sure to delete: %s ??</string>
+    <string name="word_deleted_alert">Are you sure to delete: %s ?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="go">GO</string>

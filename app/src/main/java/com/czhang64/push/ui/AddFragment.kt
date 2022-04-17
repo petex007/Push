@@ -1,23 +1,22 @@
-package com.czhang64.keep.ui
+package com.czhang64.push.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import androidx.fragment.app.activityViewModels
-import com.czhang64.keep.R
-import com.czhang64.keep.database.Exercise
-import com.czhang64.keep.databinding.FragmentAddBinding
+import com.czhang64.push.R
+import com.czhang64.push.database.Exercise
+import com.czhang64.push.databinding.FragmentAddBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import java.lang.NullPointerException
 
 class AddFragment : BottomSheetDialogFragment(), AdapterView.OnItemSelectedListener {
     private val sharedViewModel: MainViewModel by activityViewModels()
     private var binding: FragmentAddBinding?=null
     private var newExercise = Exercise()
+    private var restDay = Exercise()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,13 +28,36 @@ class AddFragment : BottomSheetDialogFragment(), AdapterView.OnItemSelectedListe
             typeSpinner.onItemSelectedListener = this@AddFragment
 
             addAddBt.setOnClickListener {
-                with(newExercise){
-                    name = editName.text.toString()
-                    time = editTime.text.toString()
-                    weight = editWeight.text.toString()
-                    comment = editComment.text.toString()
+                var rest = editWeight.text.toString().toInt()
+                var count = rest
+                var loop = 1
+                var bool = 0
+                for (i in 0..6){
+                    if (count==0){
+                        with(restDay){
+                            type = 5
+                            name = "REST DAY"
+                            time = "REST DAY"
+                            weight = "REST DAY"
+                            comment = "REST DAY"
+                        }
+                        sharedViewModel.insert(restDay)
+
+                        count = rest
+                    }
+                    else{
+                        with(newExercise){
+                            name = editName.text.toString()
+                            time = editTime.text.toString()
+                            weight = editWeight.text.toString()
+                            comment = editComment.text.toString()
+                        }
+                        sharedViewModel.insert(newExercise)
+                        count = count -1
+
+                    }
+
                 }
-                sharedViewModel.insert(newExercise)
                 dismiss()
             }
             addCancelBt.setOnClickListener {

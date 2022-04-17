@@ -6,10 +6,10 @@
     <item
         android:id="@+id/action_settings"
         android:title="@string/Settings" />
-    <item
-        android:id="@+id/action_info"
-        android:title="@string/InfoTitle" />
-    <item
-        android:id="@+id/action_web"
-        android:title="@string/webTitle" />
+<!--    <item-->
+<!--        android:id="@+id/action_info"-->
+<!--        android:title="@string/InfoTitle" />-->
+<!--    <item-->
+<!--        android:id="@+id/action_web"-->
+<!--        android:title="@string/webTitle" />-->
 </menu>

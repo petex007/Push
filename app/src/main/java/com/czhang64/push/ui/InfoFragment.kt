@@ -1,4 +1,4 @@
-package com.czhang64.keep.ui
+package com.czhang64.push.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.czhang64.keep.R
-import com.czhang64.keep.databinding.FragmentInfoBinding
+import com.czhang64.push.R
+import com.czhang64.push.databinding.FragmentInfoBinding
 
 
 class InfoFragment : Fragment() {
@@ -24,7 +24,7 @@ class InfoFragment : Fragment() {
         binding = fragmentInfoBinding
         binding?.apply{
             infoBackBt.setOnClickListener {
-                findNavController().navigate(R.id.action_infoFragment_to_mainFragment)
+//                findNavController().navigate(R.id.action_infoFragment_to_mainFragment)
             }
         }
         return fragmentInfoBinding.root

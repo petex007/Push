@@ -1,4 +1,4 @@
-package com.czhang64.keep
+package com.czhang64.push
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

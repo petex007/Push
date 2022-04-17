@@ -1,13 +1,12 @@
-package com.czhang64.keep.ui
+package com.czhang64.push.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.czhang64.keep.MainActivity.Companion.DEFAULT_WEBVIEW_URL
-import com.czhang64.keep.database.Exercise
-import com.czhang64.keep.database.ExerciseRepository
+import com.czhang64.push.MainActivity.Companion.DEFAULT_WEBVIEW_URL
+import com.czhang64.push.database.Exercise
+import com.czhang64.push.database.ExerciseRepository
 
 
 class MainViewModel(app: Application) : AndroidViewModel(app) {

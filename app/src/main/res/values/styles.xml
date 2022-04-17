@@ -1,7 +1,3 @@
 <resources>
 
-    <style name="SplashScreenTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_bg</item>
-    </style>
-
 </resources>

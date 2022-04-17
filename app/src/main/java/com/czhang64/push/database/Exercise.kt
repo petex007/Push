@@ -1,4 +1,4 @@
-package com.czhang64.keep.database
+package com.czhang64.push.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

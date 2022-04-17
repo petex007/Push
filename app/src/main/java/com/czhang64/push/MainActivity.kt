@@ -1,4 +1,4 @@
-package com.czhang64.keep
+package com.czhang64.push
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,14 +43,14 @@ class MainActivity : AppCompatActivity() {
                 navHostFragment.navController.navigate(R.id.action_mainFragment_to_settingsFragment)
                 true
             }
-            R.id.action_info->{
-                navHostFragment.navController.navigate(R.id.action_mainFragment_to_infoFragment)
-                true
-            }
-            R.id.action_web->{
-                navHostFragment.navController.navigate(R.id.action_mainFragment_to_webViewFragment)
-                true
-            }
+//            R.id.action_info->{
+//                navHostFragment.navController.navigate(R.id.action_mainFragment_to_infoFragment)
+//                true
+//            }
+//            R.id.action_web->{
+//                navHostFragment.navController.navigate(R.id.action_mainFragment_to_webViewFragment)
+//                true
+//            }
             else -> super.onOptionsItemSelected(item)
         }
     }

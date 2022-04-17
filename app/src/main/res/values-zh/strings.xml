@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Keep</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="startBt">开始</string>
+    <string name="addBt">添加</string>
+    <string name="deleteBt">删除</string>
+    <string name="Settings">设置</string>
+    <string name="applyBt">应用</string>
+    <string name="backBt">回退</string>
+    <string name="InformationTest">这个应用程序将帮助你计划你每周要做的运动。你将能够添加和检查练习。你还可以检查你已经完成的所有练习。Keep it up!\n创作者: Chengyi Zhang\nVersion:1.0.0\nCSC214 University of Rochester</string>
+    <string name="type">种类</string>
+    <string name="nameHint">名称...</string>
+    <string name="timeHint">时长...</string>
+    <string name="WeightHint">重量...</string>
+    <string name="CommentHint">更多信息...</string>
+    <string name="cancelBt">取消</string>
+    <string name="InfoTitle">信息</string>
+    <string name="word_deleted_alert">你要删除: %s 吗??</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="go">搜索</string>
+    <string name="webTitle">网站</string>
+    <string-array name="typesArray">
+        <item>胸部</item>
+        <item>有氧</item>
+        <item>腿部</item>
+        <item>手臂</item>
+        <item>背部</item>
+    </string-array>
+    <string name="set1">名称+日期</string>
+    <string name="set2">名称+信息</string>
+    <string name="set3">日期+信息</string>
+    <string name="checkBt">查看</string>
+</resources>

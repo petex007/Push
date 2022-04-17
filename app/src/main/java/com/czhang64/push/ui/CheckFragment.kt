@@ -1,4 +1,4 @@
-package com.czhang64.keep.ui
+package com.czhang64.push.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.czhang64.keep.R
-import com.czhang64.keep.databinding.FragmentCheckBinding
+import com.czhang64.push.R
+import com.czhang64.push.databinding.FragmentCheckBinding
 
 class CheckFragment : Fragment() {
     private val sharedViewModel: MainViewModel by activityViewModels()
