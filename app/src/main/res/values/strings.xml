@@ -32,4 +32,8 @@
     <string name="set2">name+comment</string>
     <string name="set3">date+comment</string>
     <string name="checkBt">Check</string>
+    <string name="history">You have been pushing yourself for:</string>
+    <string name="historydays">Days!</string>
+    <string name="pastexercises">Past Exercises:</string>
+
 </resources>

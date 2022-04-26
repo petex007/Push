@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextClock
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
@@ -43,6 +44,9 @@ class MainFragment : Fragment() {
             }
             checkbt.setOnClickListener {
                 findNavController().navigate(R.id.action_mainFragment_to_checkFragment)
+            }
+            trophy.setOnClickListener {
+                findNavController().navigate(R.id.action_mainFragment_to_historyFragment)
             }
             recyclerView.run{
                 layoutManager = LinearLayoutManager(context)

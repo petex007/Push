@@ -32,4 +32,8 @@
     <string name="set2">名称+信息</string>
     <string name="set3">日期+信息</string>
     <string name="checkBt">查看</string>
+    <string name="history">You have been pushing yourself for:</string>
+    <string name="historydays">Days!</string>
+    <string name="pastexercises">Past Exercises:</string>
+
 </resources>
